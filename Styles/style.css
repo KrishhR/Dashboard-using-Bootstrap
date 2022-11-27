@@ -1,0 +1,329 @@
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(/Fonts/Montserrat-Bold.ttf), url(/Fonts/Montserrat-ExtraBold.ttf), url(/Fonts/Montserrat-ExtraLight.ttf), url(/Fonts/Montserrat-Light.ttf), url(/Fonts/Montserrat-Medium.ttf), url(/Fonts/Montserrat-Regular.ttf), url(/Fonts/Montserrat-SemiBold.ttf);
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap'); */
+
+/* Common Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg--ebony-clay {
+    background-color: #252B42;
+}
+
+.bg--jordy-blue {
+    background-color: #8EC2F2;
+}
+
+.bg--white {
+    background-color: #FFFFFF;
+}
+
+.bg--picton-blue {
+    background-color: #23A6F0;
+}
+
+.text--c-ebony-clay {
+    color: #252B42;
+}
+
+.text--c-white {
+    color: #FFFFFF;
+}
+
+.text--c-picton-blue {
+    color: #23A6F0;
+}
+
+.text--c-dove-gray {
+    color: #737373;
+}
+
+.text--f-monteserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Componants CSS */
+/* Header Section CSS */
+.header nav {
+    padding: 35px 0;
+    background-color: #252B42;
+}
+
+.header__brand {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.header__toggler-btn,
+.header__toggler-btn:focus {
+    border: none;
+    outline: none;
+}
+
+.header__nav-btn1 {
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.header__nav-btn2 {
+    border: none;
+    padding: 15px 24px;
+    border-radius: 5px;
+    width: 220px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+}
+
+/* Header Media Query */
+@media screen and (min-width: 768px) {
+    .header nav {
+        background-color: transparent;
+    }
+
+    .header__nav-list>li>a {
+        font-weight: 600;
+        font-size: 14px !important;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.2px;
+    }
+}
+
+/* Banner Section CSS */
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.75)100%), url(/Images/Header/hero-cover1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 628px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.banner__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 50px 50px;
+}
+
+.banner__desc p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    max-width: 376px;
+    text-align: center;
+    margin: 0 67.5px 40px;
+}
+
+.banner__cta .form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.banner__cta-btn1 {
+    padding: 10px 36px;
+    width: 187px;
+    border-radius: 37px;
+    border: none;
+}
+
+.banner__cta-btn2 {
+    background-color: transparent;
+    padding: 10px 36px;
+    width: 160px;
+    border-radius: 37px;
+    color: #23A6F0;
+    border: 1px solid;
+}
+
+/* Banner Section Media Query */
+@media screen and (min-width: 768px) {
+    .banner {
+        margin-top: -124px;
+        background: linear-gradient(89.85deg, #000000 0.13%, #000000 0.14%, rgba(0, 0, 0, 0) 99.56%), url(/Images/Header/hero-cover1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .banner__title {
+        font-weight: 800;
+        font-size: 58px;
+        line-height: 80px;
+        letter-spacing: 0.2px;
+        text-align: left;
+        margin: 50px 0;
+    }
+
+    .banner__desc p {
+        margin: 0 0 40px;
+        text-align: left;
+    }
+
+    .banner__cta .form-control {
+        flex-direction: row;
+    }
+
+    .banner__cta-btn2 {
+        color: #FFFFFF;
+    }
+}
+
+/* Features Section CSS */
+.feature {
+    padding: 80px 0;
+}
+
+.feature .row {
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    gap: 30px;
+}
+
+.feature__card-desc {
+    text-align: center;
+    max-width: 234px;
+}
+
+/* Testimonial Section CSS */
+.testimonial {
+    padding: 75px 42px;
+}
+
+.testimonial__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+
+.testimonial__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.testimonial__title+span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    max-width: 470px;
+    text-align: center;
+}
+
+.testimonial .row .col {
+   margin-bottom: 30px;
+   display: flex;
+   justify-content: center;
+}
+
+.testimonial__card {
+    padding: 30px 40px;
+    max-width: 449px;
+    position: relative;
+}
+
+.testimonial__card-desc h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.testimonial__card-desc label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.testimonial__rating {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 3.5px;
+    position: relative;
+}
+
+.rating-star {
+    background: #F3CD03;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 18.35px;
+    width: 18.35px;
+}
+
+.empty-star {
+    color: #F3CD03;
+    font-size: 25px;
+    position: relative;
+}
+
+.testimonial__card-content {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+.card1::before, .card2::before {
+    content: '';
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: -42px;
+    border-radius: 50%;
+    display: none;
+}
+
+.card1::before {
+    background-image: url(/Images/Testimonial/user1.png);
+}
+
+.card2::before {
+    background-image: url(/Images/Testimonial/user2.png);
+}
+
+@media screen and (min-width: 768px) {
+    .card1::before, .card2::before {
+        display: block;
+    }
+}
