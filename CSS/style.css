@@ -3,13 +3,7 @@
     src: url(/Fonts/Montserrat-Bold.ttf), url(/Fonts/Montserrat-ExtraBold.ttf), url(/Fonts/Montserrat-ExtraLight.ttf), url(/Fonts/Montserrat-Light.ttf), url(/Fonts/Montserrat-Medium.ttf), url(/Fonts/Montserrat-Regular.ttf), url(/Fonts/Montserrat-SemiBold.ttf);
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap'); */
-
 /* Common Styles */
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -145,7 +139,7 @@ body {
     text-align: center;
 }
 
-.section__banner-cta .form-control {
+.section__banner-cta .form-group {
     align-items: center;
     background-color: transparent;
     border: none;
@@ -195,7 +189,7 @@ body {
         text-align: left;
     }
 
-    .section__banner-cta .form-control {
+    .section__banner-cta .form-group {
         flex-direction: row;
     }
 
@@ -496,14 +490,24 @@ body {
     position: relative;
 }
 
-.section__pricing-list-checklist-item > .tick {
-    background-color: #2DC071;
+.section__pricing-list-checklist-item>.tick {
     border-radius: 50%;
     margin-right: 10px;
     padding: 5px 10px;
 }
 
-.section__pricing-list-checklist-item > .tick>span {
+.section__pricing-list-checklist li:nth-child(1)>.tick,
+.section__pricing-list-checklist li:nth-child(2)>.tick,
+.section__pricing-list-checklist li:nth-child(3)>.tick {
+    background-color: #2DC071;
+}
+
+.section__pricing-list-checklist li:nth-child(4)>.tick,
+.section__pricing-list-checklist li:nth-child(5)>.tick {
+    background-color: #BDBDBD;
+}
+
+.section__pricing-list-checklist-item>.tick>span {
     border-bottom: 3px solid #FFFFFF;
     border-right: 3px solid #FFFFFF;
     display: inline-block;
@@ -555,12 +559,100 @@ body {
     background-size: cover;
 }
 
-.section__contact-form {
-    max-width: 602px;
-    border: none;
+.section__contact-container {
     background-color: transparent;
+    max-width: 602px;
 }
 
-.section__contact-form table {
+.section__contact-head label {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    text-align: center;
+}
+
+.section__contact-head h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 57px;
+}
+
+.section__contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 28px;
+}
+
+.section__contact-form-btn {
+    border-radius: 5px;
+    padding: 15px 40px;
     width: 100%;
+}
+
+/* Footer Section CSS */
+.footer__newsletter {
+    background: #FAFAFA;
+    padding: 40px;
+}
+
+.footer__newsletter-heading h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    line-height: 32px;
+}
+
+.footer__newsletter-heading span {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+}
+
+.footer__newsletter button {
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    padding: 15px 40px;
+}
+
+.footer__links {
+    padding: 50px 0 50px 87px;
+}
+.footer__links-list li:first-child {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    margin-bottom: 20px;
+}
+
+.footer__links-list li:not(:first-child) {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+}
+
+.footer__copyright {
+    background-color: #252B42;
+    color: #FFFFFF;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__copyright {
+        background-color: white;
+        color: #252B42;
+    }
 }
